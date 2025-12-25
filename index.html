@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사내 카페 - 예약 시스템</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 헤더 섹션 -->
+    <header>
+        <div class="container">
+            <h1>🎵 우리 카페</h1>
+            <nav>
+                <a href="#about">소개</a>
+                <a href="#reservation">예약</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 카페 소개 섹션 -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>카페 소개</h2>
+
+            <!-- 카페 이미지 갤러리 -->
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/8B4513/FFFFFF?text=카페+내부" alt="카페 내부">
+                    <p>편안한 카페 공간</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/D2691E/FFFFFF?text=음료" alt="음료">
+                    <p>다양한 음료</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/CD853F/FFFFFF?text=간식" alt="간식">
+                    <p>맛있는 간식</p>
+                </div>
+            </div>
+
+            <!-- 카페 정보 -->
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📍 위치</h3>
+                    <p>본사 1층 로비</p>
+                    <p class="detail">엘리베이터 옆</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>⏰ 운영시간</h3>
+                    <p>평일: 09:00 - 18:00</p>
+                    <p class="detail">주말 및 공휴일 휴무</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>☕ 제공 음료</h3>
+                    <ul>
+                        <li>아메리카노</li>
+                        <li>카페라떼</li>
+                        <li>카푸치노</li>
+                        <li>녹차라떼</li>
+                        <li>과일주스</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>🍰 제공 간식</h3>
+                    <ul>
+                        <li>크루아상</li>
+                        <li>머핀</li>
+                        <li>쿠키</li>
+                        <li>케이크</li>
+                        <li>샌드위치</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 예약 섹션 -->
+    <section id="reservation" class="reservation-section">
+        <div class="container">
+            <h2>예약하기</h2>
+
+            <form id="reservationForm" class="reservation-form">
+                <div class="form-group">
+                    <label for="name">이름 *</label>
+                    <input type="text" id="name" name="name" required placeholder="홍길동">
+                </div>
+
+                <div class="form-group">
+                    <label for="department">부서 *</label>
+                    <input type="text" id="department" name="department" required placeholder="개발팀">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">날짜 *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">시간 *</label>
+                    <select id="time" name="time" required>
+                        <option value="">시간을 선택하세요</option>
+                        <option value="09:00">09:00</option>
+                        <option value="09:30">09:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="people">인원 *</label>
+                    <input type="number" id="people" name="people" min="1" max="10" required placeholder="1">
+                </div>
+
+                <div class="form-group">
+                    <label for="purpose">목적</label>
+                    <select id="purpose" name="purpose">
+                        <option value="">선택하세요</option>
+                        <option value="회의">회의</option>
+                        <option value="휴식">휴식</option>
+                        <option value="미팅">미팅</option>
+                        <option value="기타">기타</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">특이사항</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="특별한 요청사항이 있으시면 적어주세요"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">예약하기</button>
+            </form>
+
+            <div id="message" class="message"></div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 사내 카페. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
