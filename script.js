@@ -1,6 +1,6 @@
 // Google Apps Script Web App URL (나중에 설정)
 // 구현 설명서의 지시에 따라 아래 URL을 업데이트하세요
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyP_Kf_tOxo8KiqJB9k27dv4BEIYNZCUALrGzgISBV5vEOHulfdYtReek5FcJDTFMlGPQ/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz11Ml-OTzuAj03dNmR3UkISb9pT8SbJqK-GaVWPByzhGBbfk4__sXJgtRMfQpwDx7u/exec';
 
 // 오늘 날짜를 기본값으로 설정
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,7 +14,7 @@ document.getElementById('reservationForm').addEventListener('submit', async (e) 
     e.preventDefault();
 
     // Google Apps Script URL 확인
-    if (SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+    if (!SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
         showMessage('Google Apps Script URL을 먼저 설정해주세요. 구현 설명서를 참조하세요.', 'error');
         return;
     }
